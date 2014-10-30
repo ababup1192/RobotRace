@@ -1,9 +1,9 @@
 public class Robot{
-	private int id;
-	private static int maxId;
-	private String name;
-	private int distance;
-	private int energy;
+	protected int id;
+	protected static int maxId;
+	protected String name;
+	protected int distance;
+	protected int energy;
 
 	public Robot(int id, String name, int distance, int energy){
 		this.id = id;

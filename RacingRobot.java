@@ -1,18 +1,9 @@
-public class RacingRobot{
-	private int id;
-	private static int maxId;
-	private String name;
-	private int distance;
-	private int energy;
-	private FootParts footParts;
-	private int speed;
+public class RacingRobot extends Robot{
+	protected FootParts footParts;
+	protected int speed;
 
 	public RacingRobot(int id, String name, int distance, int energy, int speed, FootParts footParts){
-		this.id = id;
-		maxId = id;
-		this.name = name;
-		this.distance = distance;
-		this.energy = energy;
+		super(id, name, distance, energy);
 		this.speed = speed;
 		this.footParts = footParts;
 	}
@@ -36,38 +27,6 @@ public class RacingRobot{
 		return energy >= 0;
 	}
 
-	public int getId(){
-		return id;
-	}
-
-	public void setId(int id){
-		this.id = id;
-	}
-
-	public String getName(){
-		return name;
-	}
-
-	public void setName(String name){
-		this.name = name;
-	}
-
-	public int getDistance(){
-		return distance;
-	}
-
-	public void setDistance(int distance){
-		this.distance = distance;
-	}
-
-	public int getEnergy(){
-		return energy;
-	}
-
-	public void setEnergy(int energy){
-		this.energy = energy;
-	}
-
 	public int getSpeed(){
 		return speed;
 	}
@@ -85,6 +44,6 @@ public class RacingRobot{
 	}
 
 	public String getInfo(){
-		return String.format("Robot(id=%2d, name=%6s, energy=%d, distance=%3d, %s)", id, name, energy, distance, footParts.getInfo());
+		return String.format("RacingRobot(id=%2d, name=%6s, energy=%d, distance=%3d, %s)", id, name, energy, distance, footParts.getInfo());
 	}
 }

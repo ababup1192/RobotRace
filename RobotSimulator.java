@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class RobotSimulator{
-		private RacingRobot[] robotArray;
+		private Robot[] robotArray;
 		private String[] robotNameArray = {"Ebi", "Kani", "Uni", "Tako", "Ika", "Maguro"};
 
 	public RobotSimulator(){
@@ -14,7 +14,7 @@ public class RobotSimulator{
 		System.out.println("レース開始！");
 		for(int i=0; i<5; i++){
 			for(int j=0; j<6; j++){
-				robotArray[j].run();
+				((RacingRobot)robotArray[j]).run();
 			}
 		}
 		System.out.println("レース終了！");
@@ -25,7 +25,7 @@ public class RobotSimulator{
 	}
 
 	public void register(){
-		robotArray = new RacingRobot[6];
+		robotArray = new Robot[6];
 		Random random = new Random();
 
 		for(int i=0; i<6; i++){
