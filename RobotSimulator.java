@@ -1,9 +1,20 @@
 public class RobotSimulator{
 
 	public static void main(String[] args){
-		Robot robot = new Robot(1,"Ebi", 0, 100);
+		Robot[] robotArray = new Robot[6];
+		String[] robotNameArray = {"Ebi", "Kani", "Uni", "Tako", "Ika", "Maguro"};
 
-		System.out.println(robot.getInfo());
+		for(int i=0; i<3; i++){
+			robotArray[i] = new Robot(i+1, robotNameArray[i] , 0, 100);
+		}
+
+		for(int i=0; i<3; i++){
+			robotArray[i+3] = new Robot(robotNameArray[i+3]);
+		}
+
+		for(int i=0; i<6; i++){
+			System.out.println(robotArray[i].getInfo());
+		}
 
 	}
 
