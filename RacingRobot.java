@@ -23,7 +23,7 @@ public class RacingRobot extends Robot implements Forwardable{
 		}
 	}
 
-	public forward(){
+	public void forward(){
 		run();
 	}
 

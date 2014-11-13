@@ -1,4 +1,4 @@
-public class Robot{
+public class Robot implements Forwardable{
 	protected int id;
 	protected static int maxId;
 	protected String name;
@@ -48,6 +48,8 @@ public class Robot{
 	public void setEnergy(int energy){
 		this.energy = energy;
 	}
+
+	public void forward(){}
 
 	public String getInfo(){
 		return String.format("Robot(id=%d, name=%6s, energy=%d, distance=%d)", id, name, energy, distance);

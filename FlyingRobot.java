@@ -24,7 +24,7 @@ public class FlyingRobot extends Robot implements Forwardable{
   }
 
   public void forward(){
-    fly;
+    fly();
   }
 
   public boolean isFlying(){
