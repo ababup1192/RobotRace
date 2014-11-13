@@ -1,4 +1,4 @@
-public class RacingRobot extends Robot{
+public class RacingRobot extends Robot implements Forwardable{
 	protected FootParts footParts;
 	protected int speed;
 
@@ -21,6 +21,10 @@ public class RacingRobot extends Robot{
 			energy = energy - 20;
 			distance += speed + footParts.getSpeed();
 		}
+	}
+
+	public forward(){
+		run();
 	}
 
 	public boolean isRunning(){

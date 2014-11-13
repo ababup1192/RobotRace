@@ -1,4 +1,4 @@
-public class FlyingRobot extends Robot{
+public class FlyingRobot extends Robot implements Forwardable{
   protected WingParts wingParts;
   protected int speed;
 
@@ -21,6 +21,10 @@ public class FlyingRobot extends Robot{
       energy = energy - 30;
       distance += speed + wingParts.boost();
     }
+  }
+
+  public void forward(){
+    fly;
   }
 
   public boolean isFlying(){
